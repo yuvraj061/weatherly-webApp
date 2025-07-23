@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weatherly - Modern Weather App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="https://openweathermap.org/themes/openweathermap/assets/vendor/owm/img/icons/favicon.ico">
+</head>
+<body>
+    <div class="main-wrapper">
+        <div class="container">
+            <div class="header">
+                <h1>🌤️ Weatherly</h1>
+                <p>Your modern weather companion</p>
+            </div>
+
+            <div class="search-section">
+                <form class="search-form">
+                    <div class="input-group">
+                        <input type="text" id="cityInput" list="cityList" placeholder="Enter city name or location">
+                        <datalist id="cityList"></datalist>
+                    </div>
+
+                    <div class="controls">
+                        <div class="toggles">
+                            <label class="toggle">
+                                <input type="checkbox" id="unitToggle">
+                                <span>°F</span>
+                            </label>
+                            <label class="toggle">
+                                <input type="checkbox" id="darkModeToggle">
+                                <span>Dark Mode</span>
+                            </label>
+                        </div>
+
+                        <div class="buttons">
+                            <button type="button" class="btn btn-primary" id="searchBtn">
+                                🔍 Search Weather
+                            </button>
+                            <button type="button" class="btn btn-secondary" id="locationBtn">
+                                📍 Use Location
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <div id="weatherResult" class="weather-result hidden"></div>
+            <div id="forecast" class="forecast-container hidden"></div>
+            <div id="recentSearches" class="recent-searches"></div>
+        </div>
+
+        <div id="toast" class="toast hidden"></div>
+
+        <footer class="footer">
+            <p>&copy; <span id="currentYear"></span> Weatherly. All rights reserved.</p>
+            <p>Coded by Yuvraj Singh and powered by <a href="https://openweathermap.org/" target="_blank" rel="noopener noreferrer">OpenWeatherMap API</a> and <a href="https://rapidapi.com/wirefreethought/api/wft-geo-db" target="_blank" rel="noopener noreferrer">GeoDB Cities API</a>.</p>
+            <div class="footer-links">
+                <a href="#" class="footer-link">Privacy Policy</a>
+                <span class="separator">|</span>
+                <a href="#" class="footer-link">Terms of Service</a>
+            </div>
+        </footer>
+        </div> <script src="script.js"></script>
+</body>
+</html>
